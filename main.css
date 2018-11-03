@@ -1,0 +1,648 @@
+/*
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+* OFFICE-PARTY - website - v1.2 -
+* 24/07/2018
+* http://www.office-party.info/
+* contact@office-party.info
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+
+
+
+
+/* =====  Global  =========================================================== */
+
+
+/* SuisseIntl */
+@font-face {
+   font-family: 'Suisse Int';
+   src: url(fonts/SuisseIntl-Book-WebM.eot),
+   url(fonts/SuisseIntl-Book-WebM.woff),
+   url(fonts/SuisseIntl-Book-WebM.woff2),
+   url(fonts/SuisseIntl-Book-WebM.ttf);
+   font-size: 16px;
+}
+
+@font-face {
+  font-family: 'Suisse Int BookItalic';
+  src: url(font/SuisseIntl-BookItalic-WebM.eot),
+  url(fonts/SuisseIntl-BookItalic-WebM.woff),
+  url(fonts/SuisseIntl-BookItalic-WebM.woff2),
+  url(fonts/SuisseIntl-BookItalic-WebM);
+  font-size: 16px;
+}
+
+* {
+   font-family: 'Suisse Int';
+   box-sizing: border-box;
+}
+
+body {
+  background: #F0F0F0;
+  margin: 0;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+[class*="col-"] {
+    float: left;
+}
+
+
+
+/* ====  1 MediaQueries  ==================================================== */
+
+/* =============================================================================
+   1. Mobile
+==============================================================================*/
+@media only screen and (min-width: 20em) {  /* 320px */
+
+  [class*="col-"] {
+       width: 100%;
+   }
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* -----  Images  ----------------------------------------------------------- */
+
+.paper-marks {
+  position: absolute;
+  z-index: 1;
+  width: 75%;
+  margin: 12rem auto;
+  left: 0;
+  right: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  user-select: none;
+}
+
+.st0 {
+  fill:none;
+  stroke:#000000;
+  stroke-width:2.75px;
+  stroke-miterlimit:10;
+}
+
+.st1 {
+  fill:none;
+  stroke:#000000;
+  stroke-width:1.75px;
+  stroke-miterlimit:10;
+}
+
+
+/* -----  WorkshopPreview  -------------------------------------------------- */
+
+.folder-desktop {
+  display: none;
+}
+
+.folder {
+  width: 200px;
+}
+
+.folders-mobile {
+  display: flex;
+}
+
+img.folder-mobile {
+  margin: 0 25%;
+}
+
+p.label {
+  font-size: 0.625rem;
+  text-align: center;
+}
+
+
+/* -----  Header  ----------------------------------------------------------- */
+
+#header {
+  display: block;
+  margin-bottom: 9rem;
+  /* border: solid 2px green; */
+}
+
+#office-party {
+  width: 6.75rem;
+}
+
+
+/* -----  Main Content  ----------------------------------------------------- */
+
+#main {
+  padding: 1rem;
+  display: block;
+}
+
+
+.note {
+  padding-right: 1rem;
+}
+
+.text {
+  padding-left: 0;
+}
+
+#byline {
+  margin-top: 3rem;
+  text-align: right;
+}
+
+.footnote {
+  column-count: 1;
+  padding-top: 3rem;
+  padding-left: 0;
+  margin-bottom: 1rem;
+}
+
+/* -----  Footer  ----------------------------------------------------------- */
+
+#noteInfo, #noteInfo:active {
+  position: absolute;
+  z-index: 2;
+  display: none;
+  width: 154px;
+  height: 154px;
+  margin: auto;
+  right: 0;
+  left: 0;
+  top: 1rem;
+  padding: 0.625rem;
+  background-color: #FFF494;
+}
+
+#postNote {
+  position: absolute;
+  z-index: 1;
+  width: 186px;
+  height: 186px;
+  margin: 3rem;
+  cursor: pointer;
+}
+
+#postNote:hover #noteInfo {
+  display: block;
+}
+
+#footer {
+  border-top: solid 1px grey;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 300px;
+}
+
+/* -----  Typography  ------------------------------------------------------- */
+
+h1, h2, h3, p, i {
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings:"kern" 1;
+  -ms-font-feature-settings:"kern" 1;
+  -o-font-feature-settings:"kern" 1;
+  -webkit-font-feature-settings:"kern" 1;
+  font-feature-settings:"kern" 1;
+  font-kerning: normal;
+  font-weight: 400;
+}
+
+/* header */
+h1.header {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+}
+
+h2.header {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  text-indent: 0;
+}
+
+h3.header {
+  font-size: 1rem;
+}
+
+/* content */
+h2 {
+  font-size: 1rem;
+  text-indent: 1rem;
+}
+
+p.body {
+  font-size: 1rem;
+  text-align: justify;
+  hyphens: auto;
+  word-spacing: -0.04rem;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+}
+
+p.small {
+  font-size: 0.625rem;
+}
+
+i {
+  font-family: 'Suisse Int BookItalic';
+  font-style: normal;
+}
+
+/* footnotes */
+ol, .customCounter {
+  margin: 0;
+  list-style: none;
+  font-size: 0.625rem;
+  padding-right: 1rem;
+}
+
+.customCounter li {
+  counter-increment: section;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.customCounter li::before {
+  position: absolute;
+  left: -40px;
+  content: "[" counter(section, decimal) "] ";
+}
+
+
+
+/* links */
+a, a:link {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+sup {
+  font-size: 0.625rem;
+  vertical-align: top;
+}
+
+/*==============================================================================
+   2. Tablet Portrait
+==============================================================================*/
+
+@media only screen and (min-width: 52em) {  /* 832px */
+
+[class*="col-"] {
+   width: 90%;
+}
+
+.col-s-1 {width: 8.33%;}
+.col-s-2 {width: 25%;}
+.col-s-3 {width: 25%;}
+.col-s-4 {width: 33.33%;}
+.col-s-5 {width: 41.66%;}
+.col-s-6 {width: 50%;}
+.col-s-7 {width: 58.33%;}
+.col-s-8 {width: 66.66%;}
+.col-s-9 {width: 75%;}
+.col-s-10 {width: 83.33%;}
+.col-s-11 {width: 91.66%;}
+.col-s-12 {width: 100%;}
+
+
+/* -----  Images  ----------------------------------------------------------- */
+
+.paper-marks {
+  position: absolute;
+  z-index: 1;
+  width: 75%;
+  margin: 12rem auto;
+  left: 0;
+  right: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  user-select: none;
+}
+
+.st0 {
+  fill:none;
+  stroke:#000000;
+  stroke-width:1.75px;
+  stroke-miterlimit:10;
+}
+
+
+
+/* -----  WorkshopPreview  -------------------------------------------------- */
+
+.folders-mobile {
+  display: none;
+}
+
+.draggable {
+  position: absolute;
+  z-index: 2;
+  cursor: -webkit-grab; cursor: grab;
+
+}
+
+.folder {
+    display: block;
+    width: 200px;
+    text-align: center;
+}
+
+#op-1 {
+  left: 25%;
+  top: 30px;
+}
+
+p.label {
+  margin: 0;
+  padding-top: .5em;
+  font-size: 0.70rem;
+  color: black;
+  opacity: 0.6;
+}
+
+/* -----  Header  ----------------------------------------------------------- */
+
+#header {
+  margin-bottom: 16rem;
+}
+
+
+
+/* -----  Main Content  ----------------------------------------------------- */
+
+
+.note {
+  margin-left: 4rem;
+  margin-top: -.5em;
+}
+
+
+.footnote {
+  width: 70%;
+  column-count: 1;
+  padding-top: 3rem;
+  padding-left: 0;
+  margin-bottom: 7rem;
+}
+
+/* -----  Footer  ----------------------------------------------------------- */
+
+#noteInfo {
+  width: 250px;
+  height: 250px;
+  margin: auto;
+  right: 0;
+  left: 0;
+  top: 1.5rem;
+  padding: 1rem;
+  pointer-events: none;
+
+}
+
+#postNote {
+  position: absolute;
+  z-index: 1;
+  width: 300px;
+  height: 300px;
+  margin: 1.250rem;
+  left: 4rem;
+}
+
+#footer {
+  display: flex;
+}
+
+/* -----  Typography  ------------------------------------------------------- */
+
+/* header */
+h1.header, h2.header {
+  margin: 0;
+  padding: 0;
+  font-size: 1.125rem;
+}
+
+h3.header {
+  margin: 0;
+  padding-top: 2rem;
+  font-size: 1.125rem;
+  text-indent: 2rem;
+}
+
+/* content */
+h2 {
+  font-size: 1.125rem;
+  text-indent: 4rem;
+}
+
+p.body {
+  font-size: 1.125rem;
+  word-spacing: -0.04rem;
+}
+
+p.small {
+  font-size: 0.75rem;
+}
+
+
+/* footnotes */
+ol, .customCounter {
+  margin: 0;
+  list-style: none;
+  font-size: 0.75rem;
+  padding-right: 60px;
+}
+
+.customCounter li {
+  counter-increment: section;
+  position: relative;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.customCounter li::before {
+  position: absolute;
+  left: -40px;
+  content: "[" counter(section, decimal) "] ";
+}
+
+
+
+sup {
+  font-size: 0.75rem;
+  vertical-align: top;
+}
+
+
+/*==============================================================================
+   3. Tablet Landscape
+==============================================================================*/
+
+@media only screen and (min-width: 64em) {  /* 1024px */
+
+
+
+
+/* -----  Main Content  ----------------------------------------------------- */
+
+
+.note {
+  display: block;
+  margin: -.75rem 0 0 4rem;
+}
+
+.text {
+  display: block;
+}
+
+
+.footnote {
+  display: block;
+  column-count: 2;
+  width: 70%;
+  padding-top: 6rem;
+  padding-left: 1rem;
+  margin-bottom: 7rem;
+}
+
+/* -----  Footer  ----------------------------------------------------------- */
+
+#noteInfo {
+  width: 250px;
+  height: 250px;
+  top: 1.5rem;
+  padding: 1rem;
+}
+
+#postNote {
+  position: absolute;
+  z-index: 1;
+  width: 300px;
+  height: 300px;
+  margin: 1.250rem;
+  left: 4rem;
+}
+
+
+
+/* -----  Typography  ------------------------------------------------------- */
+
+/* header */
+h1.header, h2.header {
+  margin: 0;
+  padding: 0;
+  font-size: 1.375rem;
+  font-size: 1.375rem;
+}
+
+h3.header {
+  margin: 0;
+  padding-top: 2rem;
+  font-size: 1.375rem;
+  font-size: 1.375rem;
+  text-indent: 2rem;
+}
+
+/* content */
+h2 {
+  font-size: 1.375rem;
+  text-indent: 4rem;
+}
+
+p.body {
+  font-size: 1.375rem;
+  margin: 0 0 1.5rem 0;
+}
+
+p.small {
+  font-size: 0.875rem;
+}
+
+
+/* footnotes */
+ol, .customCounter {
+  margin: 0;
+  list-style: none;
+  font-size: 0.875rem;
+  padding-right: 60px;
+  vertical-align: top;
+}
+
+.customCounter li {
+  counter-increment: section;
+  position: relative;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  vertical-align: top;
+}
+
+.customCounter li::before {
+  position: absolute;
+  left: -40px;
+  content: "[" counter(section, decimal) "] ";
+  vertical-align: top;
+}
+
+
+sup {
+  font-size: 0.875rem;
+  vertical-align: top;
+}
+
+/*==============================================================================
+   4. Desktop
+==============================================================================*/
+
+@media only screen and (min-width: 85.375rem) { /*1366px */
+
+
+.container {
+  position: relative;
+  overflow: hidden;
+}
+
+/* -----  Header  ----------------------------------------------------------- */
+
+#header {
+  margin-bottom: 8rem;
+}
+
+/* -----  Main Content  ----------------------------------------------------- */
+
+.note {
+  margin-left: 2rem;
+  padding: 0 1rem;
+}
+
+.footnote {
+  column-count: 2;
+  margin-bottom: 7rem;
+}
+
+
+/* -----  Footer  ----------------------------------------------------------- */
+
+#footer {
+  border-top: solid 1px grey;
+  padding-left: 1rem;
+  padding-bottom: 300px;
+}
+}
