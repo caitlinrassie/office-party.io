@@ -22,7 +22,7 @@
    url(fonts/SuisseIntl-Book-WebM.woff),
    url(fonts/SuisseIntl-Book-WebM.woff2),
    url(fonts/SuisseIntl-Book-WebM.ttf);
-   font-size: 32px;
+   font-size: 16px;
 }
 
 @font-face {
@@ -40,7 +40,7 @@
 }
 
 body {
-  background: #ffffff;
+  background: #ebe165;
   margin: 0;
 }
 
