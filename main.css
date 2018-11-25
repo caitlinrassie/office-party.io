@@ -40,7 +40,7 @@
 }
 
 body {
-  background: #F0F0F0;
+  background: #000000;
   margin: 0;
 }
 
@@ -133,7 +133,6 @@ p.label {
 #header {
   display: block;
   margin-bottom: 9rem;
-  /* border: solid 2px green; */
 }
 
 #office-party {
@@ -224,6 +223,7 @@ h1.header {
   margin: 0;
   padding: 0;
   font-size: 1rem;
+  color: red;
 }
 
 h2.header {
