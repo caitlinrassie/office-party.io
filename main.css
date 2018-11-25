@@ -256,6 +256,12 @@ p.small {
   font-size: 0.625rem;
 }
 
+.library {
+  height:500px;
+  border-top: 1px black solid;
+  border-bottom: 1px black solid;
+}
+
 i {
   font-family: 'Suisse Int BookItalic';
   font-style: normal;
