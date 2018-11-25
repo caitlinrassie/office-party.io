@@ -373,6 +373,10 @@ sup {
   text-align: center;
 }
 
+.library-folder {
+  width: 50%;
+}
+
 #op-1 {
   left: 25%;
   top: 30px;
