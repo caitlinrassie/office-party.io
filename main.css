@@ -256,10 +256,12 @@ p.small {
   font-size: 0.625rem;
 }
 
-.library {
-  height:200px;
-  border-top: 1px black solid;
-  border-bottom: 1px black solid;
+.library-folder {
+  width: 25%;
+  height: auto;
+  margin-bottom: 50px;
+  float: left;
+  text-align: center;
 }
 
 i {
@@ -367,9 +369,9 @@ sup {
 }
 
 .folder {
-    display: block;
-    width: 200px;
-    text-align: center;
+  display: inline-block;
+  width: 200px;
+  text-align: center;
 }
 
 #op-1 {
