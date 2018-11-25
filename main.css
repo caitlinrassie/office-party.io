@@ -22,7 +22,7 @@
    url(fonts/SuisseIntl-Book-WebM.woff),
    url(fonts/SuisseIntl-Book-WebM.woff2),
    url(fonts/SuisseIntl-Book-WebM.ttf);
-   font-size: 16px;
+   font-size: 32px;
 }
 
 @font-face {
@@ -31,11 +31,7 @@
   url(fonts/SuisseIntl-BookItalic-WebM.woff),
   url(fonts/SuisseIntl-BookItalic-WebM.woff2),
   url(fonts/SuisseIntl-BookItalic-WebM);
-<<<<<<< HEAD
-  font-size: 24px;
-=======
-  font-size: 48px;
->>>>>>> 6ff8b75e5d08d36b4bf2148d99614e9b4a183258
+  font-size: 16px;
 }
 
 * {
